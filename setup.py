@@ -6,7 +6,7 @@ def readme():
 
 setup(
     name='o3manage',
-    version='0.1dev1',
+    version='0.1.1',
     description='Manage Library and Tools for Odoo in Shared Environments',
     long_description=readme(),
     classifiers=[
@@ -24,7 +24,10 @@ setup(
     entry_points={
         'console_scripts': ['o3crinstance=o3manage.cmd:o3crinstance']
     },
-    packages=['o3manage'],
+    packages=[
+        'o3manage',
+        'o3manage.pkg'
+    ],
     install_requires=[
         'docopt',
         'plumbum'
