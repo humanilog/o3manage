@@ -1,2 +1,2 @@
-OdooRPC
+o3manage
 =======
