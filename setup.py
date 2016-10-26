@@ -16,7 +16,7 @@ setup(
         'Topic :: System :: Systems Administration',
         'Operating System :: POSIX'
     ],
-    keywords='odoo management tool shared instances'
+    keywords='odoo management tool shared instances',
     url='https://github.com/humanilog/o3manage',
     author='Stefan Becker',
     author_email='ich@funbaker.de',
@@ -24,10 +24,10 @@ setup(
     entry_points={
         'console_scripts': ['o3crinstance=o3manage.cmd:o3crinstance']
     },
-    packages=['o3manage']
+    packages=['o3manage'],
     install_requires=[
         'docopt',
         'plumbum'
     ],
     include_package_data=True,
-    zip_safe=False,)
+    zip_safe=False)
