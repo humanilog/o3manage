@@ -1,6 +1,7 @@
 from pwd import getpwnam
 from os import chdir, mkdir
 import os.path
+import multiprocessing
 import configparser
 import string
 import random
@@ -83,6 +84,7 @@ class OdooInstance():
     @classmethod
     def create(
         cls, user, port_base, pkg_manager=pkg.apt.AptPackageManager(),
+        workers=multiprocessing.cpu_count(),
         db_user=None, db_password=None, db_host=None, db_port=None,
         **kwargs
     ):
@@ -107,6 +109,7 @@ class OdooInstance():
 
         configdict["xmlrpc_port"] = "{}1".format(port_base)
         configdict["longpolling_port"] = "{}2".format(port_base)
+        configdict["workers"] = str(workers)
 
         configdict["log_level"] = "warn"
         configdict.update(kwargs)
