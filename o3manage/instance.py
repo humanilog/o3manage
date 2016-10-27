@@ -94,7 +94,7 @@ class OdooInstance():
         if len(str(port_base)) != 3:
             raise ValueError("Port base has to consist of three digits.")
 
-        #pkg_manager.ensure_dependencies() # TODO: check apt return codes
+        pkg_manager.ensure_dependencies() # TODO: check apt return codes
         adduser(user)
 
         # put all config vars into a dict
