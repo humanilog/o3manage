@@ -47,7 +47,8 @@ def _create_su(
 
     autodirs = {
         "log": os.path.join(odoo_root_dir, "log"),
-        "lib": os.path.join(odoo_root_dir, "lib")
+        "lib": os.path.join(odoo_root_dir, "lib"),
+        "odoo_addons": os.path.join(odoo_root_dir, "odoo_addons")
     }
 
     for autodir in autodirs.values():
