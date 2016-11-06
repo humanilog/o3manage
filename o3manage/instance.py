@@ -99,6 +99,7 @@ class OdooInstance():
         adduser(user)
 
         # put all config vars into a dict
+        # remove method arguments
         configdict = locals()
         del configdict["cls"]
         del configdict["user"]
@@ -113,6 +114,8 @@ class OdooInstance():
         configdict["workers"] = str(workers)
 
         configdict["log_level"] = "warn"
+
+        # all other arguments are config variables
         configdict.update(kwargs)
 
         config = _create_su(user, configdict)
