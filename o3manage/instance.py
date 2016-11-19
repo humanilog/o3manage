@@ -114,6 +114,7 @@ class OdooInstance():
         configdict["workers"] = str(workers)
 
         configdict["log_level"] = "warn"
+        configdict["log_rotate"] = "True"
 
         # all other arguments are config variables
         configdict.update(kwargs)
